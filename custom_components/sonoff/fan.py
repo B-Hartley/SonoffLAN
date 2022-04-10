@@ -178,7 +178,7 @@ class SonoffDiffuserFan(SonoffFanBase):
         if percentage >50:
             await self.registry.send(self.deviceid,
                                      {'switch': 'on', 'state': 2})
-        elif speed >0:
+        elif percentage >0:
             await self.registry.send(self.deviceid,
                                      {'switch': 'on', 'state': 1})
         else:
