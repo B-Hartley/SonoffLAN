@@ -151,6 +151,9 @@ class SonoffDiffuserFan(SonoffFanBase):
 
         if 'switch' in state:
             self._is_on = state['switch'] == 'on'
+# NOT SURE IF THESE LINES WOULD HELP?
+#	else:
+#	    self._is_on =='off'
 
         if 'state' in state:
             if state['state'] == 1:
